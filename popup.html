@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Custom Code Runner</title>
+    <link href="prism.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- <textarea id="code" style="width: 500px; height: 300px"></textarea> -->
+    <div>
+      <textarea
+        placeholder="Enter HTML Source Code"
+        id="editing"
+        spellcheck="false"
+      >
+      </textarea>
+      <pre id="highlighting" aria-hidden="true">
+      <code class="language-js" id="highlighting-content">
+      </code>
+      </pre>
+    </div>
+    <label>
+      Auto Run:
+      <input type="checkbox" id="autoRun" />
+    </label>
+    <button id="run">Run Code</button>
+    <button id="save">Save</button>
+    <script src="popup.js"></script>
+    <script src="prism.js"></script>
+  </body>
+</html>

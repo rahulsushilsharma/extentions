@@ -1,0 +1,105 @@
+#code {
+  width: 500px;
+  height: 300px;
+}
+
+button {
+}
+body {
+  width: 500px;
+  height: 300px;
+}
+/* Button container */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  background-color: #2196f3; /* Material blue color */
+  color: #fff; /* Text color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
+button:hover {
+  background-color: #1565c0; /* Darker blue on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Active (clicked) state */
+button:active {
+  background-color: #0d47a1; /* Even darker blue on click */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#editing,
+#highlighting {
+  /* Both elements need the same text and space styling so they are directly on top of each other */
+  margin: 10px;
+  padding: 10px;
+  border: 0;
+  width: calc(100% - 32px);
+  height: 150px;
+}
+#editing,
+#highlighting,
+#highlighting * {
+  /* Also add text styles to highlighing tokens */
+  font-size: 10pt;
+  font-family: monospace;
+  line-height: 1.5;
+  tab-size: 2;
+}
+
+#editing,
+#highlighting {
+  /* In the same place */
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+/* Move the textarea in front of the result */
+
+#editing {
+  z-index: 1;
+}
+#highlighting {
+  z-index: 0;
+}
+
+/* Make textarea almost completely transparent */
+
+#editing {
+  color: transparent;
+  background: transparent;
+  caret-color: white; /* Or choose your favourite color */
+}
+
+/* Can be scrolled */
+#editing,
+#highlighting {
+  overflow: auto;
+  white-space: nowrap; /* Allows textarea to scroll horizontally */
+}
+
+/* No resize on textarea */
+#editing {
+  resize: none;
+}
+
+/* Paragraphs; First Image */
+* {
+  font-family: "Fira Code", monospace;
+}
+p code {
+  border-radius: 2px;
+  background-color: #eee;
+  color: #111;
+}
