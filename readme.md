@@ -28,7 +28,7 @@ Custom Code Runner is a Chrome extension that allows you to run custom JavaScrip
 
 1. Click on the extension icon in the Chrome toolbar.
 
-2. Enter your JavaScript code in the provided textarea.
+2. Enter your JavaScript code in the provided textarea and click Save.
 
 3. (Optional) Check the "Auto Run" checkbox if you want the code to execute automatically on every page load.
 
