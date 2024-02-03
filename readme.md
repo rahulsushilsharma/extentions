@@ -10,11 +10,13 @@ Custom Code Runner is a Chrome extension that allows you to run custom JavaScrip
 
 ## Getting Started
 
-
-
 ### Installation
 
 1. Clone this repository.
+
+```bash
+  git clone https://github.com/rahulsushilsharma/custom-code-runner.git
+```
 
 2. Open Chrome and navigate to `chrome://extensions/`.
 
