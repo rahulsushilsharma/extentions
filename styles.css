@@ -1,13 +1,14 @@
-#code {
-  width: 500px;
-  height: 300px;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-button {
-}
 body {
-  width: 500px;
-  height: 300px;
+  width: 620px;
+  height: 310px;
+  padding: 5px;
+  background-color: #373737;
+  color: #eee;
 }
 /* Button container */
 button {
@@ -38,34 +39,32 @@ button:active {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
 #editing,
 #highlighting {
-  /* Both elements need the same text and space styling so they are directly on top of each other */
-  margin: 10px;
-  padding: 10px;
   border: 0;
-  width: calc(100% - 32px);
-  height: 150px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: auto;
+  white-space: nowrap;
 }
 #editing,
 #highlighting,
 #highlighting * {
-  /* Also add text styles to highlighing tokens */
   font-size: 10pt;
   font-family: monospace;
   line-height: 1.5;
   tab-size: 2;
+  margin: 0;
+  padding: 0;
 }
-
-#editing,
-#highlighting {
-  /* In the same place */
-  position: absolute;
-  top: 50px;
-  left: 0;
-}
-
-/* Move the textarea in front of the result */
 
 #editing {
   z-index: 1;
@@ -73,28 +72,16 @@ button:active {
 #highlighting {
   z-index: 0;
 }
-
-/* Make textarea almost completely transparent */
-
 #editing {
   color: transparent;
   background: transparent;
-  caret-color: white; /* Or choose your favourite color */
+  caret-color: rgb(234, 234, 234); /* Or choose your favourite color */
 }
 
-/* Can be scrolled */
-#editing,
-#highlighting {
-  overflow: auto;
-  white-space: nowrap; /* Allows textarea to scroll horizontally */
-}
-
-/* No resize on textarea */
 #editing {
   resize: none;
 }
 
-/* Paragraphs; First Image */
 * {
   font-family: "Fira Code", monospace;
 }
@@ -102,4 +89,13 @@ p code {
   border-radius: 2px;
   background-color: #eee;
   color: #111;
+}
+
+.edditor {
+  height: 100%;
+  position: relative;
+}
+
+textarea:focus-visible {
+    outline: none;
 }
