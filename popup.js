@@ -1,30 +1,3 @@
-// document.getElementById('run').addEventListener('click', function() {
-//   var code = document.getElementById('code').value;
-//   chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-//     chrome.tabs.executeScript(tabs[0].id, { code: code });
-//   });
-// });
-
-// Retrieve the stored code and set it in the textarea on popup open
-// chrome.storage.sync.get(['code'], function(result) {
-//   if (result.code) {
-//     document.getElementById('code').value = result.code;
-//   }
-// });
-
-// // Save the entered code to storage
-// document.getElementById('run').addEventListener('click', function() {
-//   var code = document.getElementById('code').value;
-//   chrome.storage.sync.set({ 'code': code });
-//   executeCode(code);
-// });
-
-// // Execute the code in the currently active tab
-// function executeCode(code) {
-//   chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-//     chrome.tabs.executeScript(tabs[0].id, { code: code });
-//   });
-// }
 // Retrieve the stored code and auto-run status
 chrome.storage.sync.get(["code", "autoRun"], function (result) {
   if (result.code) {
